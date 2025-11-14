@@ -1,155 +1,172 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <!--   site só pros links do trabalho, ganhar nota kkk -->
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repositório de Links – Fontes do Trabalho</title>
+  <title>Fontes do Trabalho</title>
 
+  <!-- tailwind pq eu n vou escrever css na mão nn -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- fontes chiques q ngm nota mas deixa bonito -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <script>
+    // config tailwind q mexi sem saber oq tava fazendo
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            background: '#f8f9fa',
-            surface: '#ffffff',
-            text: {
-              primary: '#212529',
-              secondary: '#6c757d',
-            },
-            highlight: {
-              teal: '#004d40',
-              'teal-light': '#e0f2f1',
-            },
-            border: '#dee2e6',
+            fundofeio: '#f8f9fa',
+            branquinho: '#ffffff',
+            txtzao: '#212529',
+            txtmeioassim: '#6c757d',
+            verdasso: '#004d40',
+            verdinhoaguado: '#e0f2f1',
+            bordacansada: '#dee2e6'
           },
           fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
-          },
-        },
-      },
+          }
+        }
+      }
     }
   </script>
 
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-    .link-item {
-      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    }
-    .link-item:hover {
+    body { font-family: 'Montserrat', sans-serif; }
+
+    /* animação q nem precisava mas coloquei pq vi num tutorial */
+    .caixotezin { transition: 0.2s ease-in-out; }
+    .caixotezin:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.06);
       border-color: #004d40;
     }
-    .link-item:hover .arrow-icon {
-      color: #004d40;
-      transform: translateX(4px);
-    }
-    .arrow-icon {
-      transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
+    .setinha_doida { transition: 0.2s ease-in-out; }
+    .caixotezin:hover .setinha_doida { color: #004d40; transform: translateX(4px); }
   </style>
 </head>
-<!-- começou a bagunça aqui  -->
-<body class="bg-background text-text-primary">
+
+<body class="bg-fundofeio text-txtzao">
   <div class="flex min-h-screen w-full items-center justify-center p-4 sm:p-6 lg:p-8">
-    <main class="w-full max-w-5xl rounded-lg bg-surface shadow-sm">
-      <div class="border-b border-border p-6 md:p-8">
-        <!-- título grandão pq o professor gosta -->
-<h1 class="text-3xl font-bold text-text-primary">Fontes do Trabalho</h1>
+    <main class="w-full max-w-5xl rounded-lg bg-branquinho shadow-sm">
+
+      <div class="border-b border-bordacansada p-6 md:p-8">
+        <h1 class="text-3xl font-bold">Fontes do Trabalho</h1>
       </div>
 
-      <!-- parte das doenças, mó nojinho mas vamo lá -->
-<div class="grid grid-cols-1 gap-10 p-6 md:grid-cols-2 md:p-8">
+      <div class="grid grid-cols-1 gap-10 p-6 md:grid-cols-2 md:p-8">
 
+        <!-- GONORREIA (aka bagulho chato) -->
         <div class="flex flex-col gap-6">
-          <h2 class="border-l-4 border-highlight-teal pl-4 text-xl font-bold text-text-primary">Gonorreia</h2>
+          <h2 class="border-l-4 border-verdasso pl-4 text-xl font-bold">Gonorreia</h2>
           <div class="flex flex-col gap-6">
-            <a class="group block" href="https://www.gov.br/aids/pt-br/assuntos/ist/gonorreia-e-clamidia" target="_blank">
-              <div class="link-item flex items-center justify-between gap-4 rounded-md border border-border bg-white p-4">
+
+            <!-- cdc -->
+            <a href="https://www.cdc.gov/std/gonorrhea/default.htm" target="_blank" class="group block">
+              <div class="caixotezin flex items-center justify-between gap-4 rounded-md border border-bordacansada bg-white p-4">
                 <div class="flex min-w-0 items-center gap-4">
-                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-highlight-teal-light text-highlight-teal">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-md bg-verdinhoaguado text-verdasso">
                     <span class="material-symbols-outlined text-xl">link</span>
                   </div>
-                  <p class="truncate text-sm font-medium text-text-primary">Ministério da Saúde – Gonorreia e Clamídia</p>
+                  <p class="truncate text-sm font-medium">CDC – Gonorreia</p>
                 </div>
-                <div class="arrow-icon shrink-0 text-text-secondary">
+                <div class="setinha_doida shrink-0 txtmeioassim">
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </div>
               </div>
             </a>
 
-            <a class="group block" href="https://www.ufpb.br/saehu/contents/noticias/gonorreia-e-infeccao-por-clamidia-o-que-sao-sintomas-tratamento-e-prevencao" target="_blank">
-              <div class="link-item flex items-center justify-between gap-4 rounded-md border border-border bg-white p-4">
+            <!-- oms -->
+            <a href="https://www.who.int/news-room/fact-sheets/detail/gonorrhoea" target="_blank" class="group block">
+              <div class="caixotezin flex items-center justify-between gap-4 rounded-md border border-bordacansada bg-white p-4">
                 <div class="flex min-w-0 items-center gap-4">
-                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-highlight-teal-light text-highlight-teal">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-md bg-verdinhoaguado text-verdasso">
                     <span class="material-symbols-outlined text-xl">link</span>
                   </div>
-                  <p class="truncate text-sm font-medium text-text-primary">UFPB – Gonorreia e Clamídia</p>
+                  <p class="truncate text-sm font-medium">OMS – Gonorreia (Ficha Técnica)</p>
                 </div>
-                <div class="arrow-icon shrink-0 text-text-secondary">
+                <div class="setinha_doida shrink-0 txtmeioassim">
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </div>
               </div>
             </a>
 
-            <a class="group block" href="https://www.saudeamericas.com.br/post/gonorreia-sintomas-e-tratamento/" target="_blank">
-              <div class="link-item flex items-center justify-between gap-4 rounded-md border border-border bg-white p-4">
+            <!-- NHS PDF -->
+            <a href="https://www.nhs.uk/conditions/gonorrhoea/" target="_blank" class="group block">
+              <div class="caixotezin flex items-center justify-between gap-4 rounded-md border border-bordacansada bg-white p-4">
                 <div class="flex min-w-0 items-center gap-4">
-                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-highlight-teal-light text-highlight-teal">
-                    <span class="material-symbols-outlined text-xl">link</span>
+                  <div class="flex h-10 w-10 items-center justify-center rounded-md bg-verdinhoaguado text-verdasso">
+                    <span class="material-symbols-outlined text-xl">picture_as_pdf</span>
                   </div>
-                  <p class="truncate text-sm font-medium text-text-primary">Saúde Américas – Sintomas e tratamento</p>
+                  <p class="truncate text-sm font-medium">NHS – Informações sobre Gonorreia</p>
                 </div>
-                <div class="arrow-icon shrink-0 text-text-secondary">
+                <div class="setinha_doida shrink-0 txtmeioassim">
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </div>
               </div>
             </a>
+
           </div>
         </div>
 
+        <!-- HIV/AIDS (bagulho sério) -->
         <div class="flex flex-col gap-6">
-          <h2 class="border-l-4 border-highlight-teal pl-4 text-xl font-bold text-text-primary">HIV / AIDS</h2>
+          <h2 class="border-l-4 border-verdasso pl-4 text-xl font-bold">HIV / AIDS</h2>
           <div class="flex flex-col gap-6">
-            <a class="group block" href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/aids-hiv" target="_blank">
-              <div class="link-item flex items-center justify-between gap-4 rounded-md border border-border bg-white p-4">
+
+            <a href="https://www.hiv.gov/hiv-basics/overview/about-hiv-and-aids" target="_blank" class="group block">
+              <div class="caixotezin flex items-center justify-between gap-4 rounded-md border border-bordacansada bg-white p-4">
                 <div class="flex min-w-0 items-center gap-4">
-                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-highlight-teal-light text-highlight-teal">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-md bg-verdinhoaguado text-verdasso">
                     <span class="material-symbols-outlined text-xl">link</span>
                   </div>
-                  <p class="truncate text-sm font-medium text-text-primary">Ministério da Saúde – HIV/AIDS</p>
+                  <p class="truncate text-sm font-medium">HIV.gov – O que é HIV/AIDS?</p>
                 </div>
-                <div class="arrow-icon shrink-0 text-text-secondary">
+                <div class="setinha_doida shrink-0 txtmeioassim">
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </div>
               </div>
             </a>
 
-            <a class="group block" href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/aids-hiv/prevencao" target="_blank">
-              <div class="link-item flex items-center justify-between gap-4 rounded-md border border-border bg-white p-4">
+            <a href="https://www.who.int/news-room/fact-sheets/detail/hiv-aids" target="_blank" class="group block">
+              <div class="caixotezin flex items-center justify-between gap-4 rounded-md border border-bordacansada bg-white p-4">
                 <div class="flex min-w-0 items-center gap-4">
-                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-highlight-teal-light text-highlight-teal">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-md bg-verdinhoaguado text-verdasso">
                     <span class="material-symbols-outlined text-xl">link</span>
                   </div>
-                  <p class="truncate text-sm font-medium text-text-primary">Ministério da Saúde – Prevenção HIV/AIDS</p>
+                  <p class="truncate text-sm font-medium">OMS – HIV/AIDS</p>
                 </div>
-                <div class="arrow-icon shrink-0 text-text-secondary">
+                <div class="setinha_doida shrink-0 txtmeioassim">
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </div>
               </div>
             </a>
 
-            <a class="group block" href="https://www.saude.pr.gov.br/Pagina/HIVAids" target="_blank">
-              <div class="link-item flex items-center justify-between gap-4 rounded-md border border-border bg-white p-4">
+            <!-- link q tava bugado -->
+            <a href="https://www.saude.pr.gov.br/Pagina/HIVAids" target="_blank" class="group block">
+              <div class="caixotezin flex items-center justify-between gap-4 rounded-md border border-bordacansada bg-white p-4">
                 <div class="flex min-w-0 items-center gap-4">
-                  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-highlight-teal-light text-highlight-teal">
-                    <span class="material-symbols-outlined text-xl">link
+                  <div class="flex h-10 w-10 items-center justify-center rounded-md bg-verdinhoaguado text-verdasso">
+                    <span class="material-symbols-outlined text-xl">link</span>
+                  </div>
+                  <p class="truncate text-sm font-medium">Secretaria da Saúde do Paraná – HIV/AIDS</p>
+                </div>
+                <div class="setinha_doida shrink-0 txtmeioassim">
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
